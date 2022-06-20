@@ -11,7 +11,6 @@ public class Alojamiento {
 	private String direccion;
 	private String ciudad;
 	private String pais;
-	
 	/**
 	 * Este atributo de tipo mapa almacena claves que representan fechas con formato: dd_mm_aa.
 	 * El valor almacenado por cada key es el número de plazas libres en dicha fecha.
@@ -57,8 +56,7 @@ public class Alojamiento {
 	 */
 	//TODO
 	public static Alojamiento buscaAlojamiento(String nombre) {
-		Alojamiento a = new Alojamiento();
-		Informacion.alojamientosDisponibles.put("sitio2", new Alojamiento());
+		Alojamiento a = null;
 		return a;
 	}
 	
@@ -67,7 +65,7 @@ public class Alojamiento {
 	 * Devolverá true si es posible atender la petición o false en otro caso.
 	 */
 	//TODO
-	public Boolean consultaDisponibilidad(String fecha, Integer noches){
+	public Boolean consultaDisponibilidad(String fecha, Integer noches, Integer plazas){
 		Boolean disponible = Boolean.FALSE;
 		return disponible;
 	}

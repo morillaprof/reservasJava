@@ -1,12 +1,20 @@
 package modelo;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Viaje {
 	
 	private double precio;
 	private Persona cliente;
+	private Date fechaI;
+	private Date fechaF;
+	/**
+	 * En este atributo se almacenarán los diferentes alojamientos en los que dormirá el cliente.
+	 * Si pasa más de una noche en el mismo Alojamiento se repetirá el objeto en la lista.
+	 */
 	private ArrayList<Alojamiento> destinos;
+	
 	
 	public double getPrecio() {
 		return precio;
@@ -20,6 +28,18 @@ public class Viaje {
 	public void setCliente(Persona cliente) {
 		this.cliente = cliente;
 	}
+	public Date getFechaI() {
+		return fechaI;
+	}
+	public void setFechaI(Date fechaI) {
+		this.fechaI = fechaI;
+	}
+	public Date getFechaF() {
+		return fechaF;
+	}
+	public void setFechaF(Date fechaF) {
+		this.fechaF = fechaF;
+	}
 	public ArrayList<Alojamiento> getDestinos() {
 		return destinos;
 	}
@@ -27,10 +47,11 @@ public class Viaje {
 		this.destinos = destinos;
 	}
 	
+	
 	/**
 	 * Este método devolverá por consola un resumen del viaje en el que deberá mostrarse el nombre 
-	 * completo del cliente, el precio final del viaje y el nombre de cada alojamiento junto con su dirección 
-	 * y número de noches en cada alojamiento. 
+	 * completo del cliente, el precio final del viaje, el nombre de cada alojamiento junto con su dirección 
+	 * y la fecha en la que el cliente se hospeda en cada alojamiento. 
 	 */
 	//TODO
 	public String toString(){
@@ -39,7 +60,7 @@ public class Viaje {
 	}
 	
 	/**
-	 * Este método debe añadir el alojamiento a la lista de destinos del viaje
+	 * Este método debe añadir el alojamiento a la lista de destinos del viaje siempre y cuando esté disponible.
 	 * También debe actualizar las plazas libres del alojamiento en esa fecha.
 	 * @param a
 	 * @param fecha

@@ -37,15 +37,22 @@ public class Persona {
 		return "Persona [nombre=" + nombre + ", apellido1=" + apellido1 + ", apellido2=" + apellido2 + "]";
 	}
 
+	// Constructor sin parámetros
 	public Persona() {}
 	
 	// Constructor con parámetros
 	public Persona(String nombre, String apellido1, String apellido2) {
-		this.nombre = nombre;
-		this.apellido1 = apellido1;
-		this.apellido2 = apellido2;
+		this.nombre 	= nombre;
+		this.apellido1 	= apellido1;
+		this.apellido2 	= apellido2;
 	}
 	
+	/**
+	 * Este método deberá buscar al cliente en la clientela de la empresa y devolverlo.
+	 * @param dni - Para buscar el cliente trabajaremos con su dni
+	 * @return - Instancia de la clase Persona con la información del cliente buscado
+	 */
+	//TODO
 	public static Persona buscarCliente(String dni) {
 		return new Persona();
 	}

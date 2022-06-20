@@ -15,17 +15,19 @@ import modelo.Viaje;
 public class Informacion {
 
 	/**
-	 * La clave sería el nombre del alojamiento
+	 * Para almacenar la información de los alojamientos utilizamos un Mapa.
+	 * La clave sería el nombre del alojamiento y referenciaría un objeto de la clase Alojamiento
 	 */
-	public static HashMap<String, Alojamiento> alojamientosDisponibles;
+	public static HashMap<String, Alojamiento> alojamientos;
 	
 	/**
-	 * La clave sería el dni del cliente
+	 * Para almacenar la información de los clientes utilizamos un mapa.
+	 * La clave sería el dni del cliente y referenciaría a un objeto de clase Persona.
 	 */
 	public static HashMap<String, Persona> clientela;
 	
 	/**
-	 * En este atributo se almacenan los viajes de los clientes.
+	 * En este atributo de tipo Mapa se almacenan los viajes de los clientes.
 	 * Un solo viaje por cliente.
 	 */
 	public static HashMap<String, Viaje> viajes;
@@ -34,20 +36,18 @@ public class Informacion {
 	 * Este método debe generar la información necesaria de manera adecuada y almacenarla en los atributos de la clase.
 	 * 
 	 * Por ejemplo, vamos a crear 50 alojamientos con datos genéricos del tipo nombre1, dirección1, ciudad1, pais1.
-	 * Muy importante: es necesario rellenar el atributo plazasLibres de cada alojamiento. lo haremos con los 
-	 * datos de los meses de julio y agosto de 2022 y un número aleatorio comprendido entre 0 y 54.
+	 * Muy importante: es necesario rellenar el atributo plazasLibres de cada alojamiento. Lo haremos con los 
+	 * datos de los meses de julio y agosto de 2022 y un número aleatorio comprendido entre 0 y 54. 
+	 * Fuerza que algún alojamiento no tenga plazas libres alguno de los días.
 	 * 
 	 * Para los clientes bastará con almacenar 30 registros con información genérica.
+	 * 
+	 * Los viajes pueden dejarse vacíos
 	 * 
 	 */
 	//TODO
 	public void populate() {
-		this.clientela = new HashMap<String, Persona>();
-		this.alojamientosDisponibles = new HashMap<String, Alojamiento>();
 		
-		clientela.put("123", new Persona("Iván", "Morilla", "Párraga"));
-		
-		alojamientosDisponibles.put("sitio1", new Alojamiento());
 				
 	}
 }

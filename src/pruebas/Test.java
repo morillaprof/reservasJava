@@ -10,28 +10,20 @@ public class Test {
 	public static void main(String[] args) {
 		
 		//TODO
-		//Consultamos la BBDD
+		//"Consultamos" la BBDD
 		Informacion bbdd = new Informacion();
 		bbdd.populate();
 		
+		//Buscamos un cliente
 		
 		//Creamos viaje
-		Viaje v1 = new Viaje();
+				
+		//Asociamos alojamientos al viaje
 		
-		//Asignamos cliente desde la lista de clientela
-		//v1.setCliente();
-		
-		//Buscamos alojamiento por nombre
-		Alojamiento.buscaAlojamiento(null);
-		
-		//Comprobamos disponibilidad
-		Alojamiento.buscaAlojamiento(null).consultaDisponibilidad(null, null);
-		
-		//Reservamos
-		v1.reserva(null, null, null);
+		//Asociamos el cliente al viaje
 		
 		//Almacenamos el viaje en su sitio
-		bbdd.viajes.put(null, v1);
+		
 	}
 
 }
